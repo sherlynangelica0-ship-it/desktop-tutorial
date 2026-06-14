@@ -6,7 +6,7 @@ Nombre completo: Sherlyn Angelica Vargas Tapuy
 
 **Asignatura:** Programación Orientada a Objetos
 
-**Semana: 3
+Semana: 3
 
 ## Descripción del proyecto
 
