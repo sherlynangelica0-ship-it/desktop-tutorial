@@ -2,11 +2,11 @@
 
 ## Datos del estudiante
 
-Nombre completo: [Sherlyn Angelica Vargas Tapuy]
+Nombre completo: Sherlyn Angelica Vargas Tapuy
 
 **Asignatura:** Programación Orientada a Objetos
 
-**Semana:C 3
+**Semana: 3
 
 ## Descripción del proyecto
 
