@@ -1,0 +1,22 @@
+# Programa de gestión de mascotas usando programación tradicional
+
+# Función para registrar los datos de la mascota
+definición registrar_mascota():
+    nombre = aport("Ingrese el nombre de la mascota: ")
+    especie = aporte("Ingrese la especie de la mascota: ")
+    edad = apotre("Ingrese la edad de la mascota: ")
+    
+    devolver nombre, especie, edad
+
+# Función para mostrar la información de la mascota
+definición mostrar_informacion(nombre, especie, edad):
+    print("\n--- Información de la Mascota ---")
+    print("Nombre:", nombre)
+    print("Especie:", especie)
+    print("Edad:", edad, "años")
+
+
+
+# Programa principal
+nombre, especie, edad = registrar_mascota()
+mostrar_mascota(nombre, especie, edad)
