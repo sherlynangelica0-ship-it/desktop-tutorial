@@ -1,0 +1,71 @@
+class Producto:
+    def __init__(self, nombre, precio, categoria):
+        self.nombre = nombre
+        self.precio = precio
+        self.categoria = categoria
+        self.disponible = True
+
+    def cambiar_disponibilidad(self):
+        self.disponible = not self.disponible
+
+    def mostrar_producto(self):
+        estado = "Disponible" if self.disponible else "No disponible"
+        print(f"{self.nombre} | {self.categoria} | ${self.precio:.2f} | {estado}")
+
+
+class Cliente:
+    def __init__(self, nombre, cedula, telefono):
+        self.nombre = nombre
+        self.cedula = cedula
+        self.telefono = telefono
+
+    def mostrar_cliente(self):
+        print(f"Cliente: {self.nombre} | Cédula: {self.cedula} | Teléfono: {self.telefono}")
+
+
+class Restaurante:
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.productos = []
+        self.clientes = []
+
+    def agregar_producto(self, producto):
+        self.productos.append(producto)
+
+    def registrar_cliente(self, cliente):
+        self.clientes.append(cliente)
+
+    def mostrar_productos(self):
+        print("\n--- MENÚ DEL RESTAURANTE ---")
+        for producto in self.productos:
+            producto.mostrar_producto()
+
+    def mostrar_clientes(self):
+        print("\n--- CLIENTES REGISTRADOS ---")
+        for cliente in self.clientes:
+            cliente.mostrar_cliente()
+
+
+# Programa principal
+
+restaurante = Restaurante("Sabor Guayaquileño")
+
+producto1 = Producto("Arroz con pollo", 4.50, "Plato fuerte")
+producto2 = Producto("Jugo de naranja", 1.50, "Bebida")
+producto3 = Producto("Ensalada", 2.75, "Entrada")
+
+cliente1 = Cliente("Ana Pérez", "0912345678", "0991234567")
+cliente2 = Cliente("Carlos Mendoza", "0923456789", "0987654321")
+
+restaurante.agregar_producto(producto1)
+restaurante.agregar_producto(producto2)
+restaurante.agregar_producto(producto3)
+
+restaurante.registrar_cliente(cliente1)
+restaurante.registrar_cliente(cliente2)
+
+producto3.cambiar_disponibilidad()
+
+print("RESTAURANTE:", restaurante.nombre)
+restaurante.mostrar_productos()
+restaurante.mostrar_clientes()
